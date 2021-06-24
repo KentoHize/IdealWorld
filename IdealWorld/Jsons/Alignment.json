@@ -1,0 +1,38 @@
+[
+  {
+    "ID": 1,
+    "Name": "Gangs",
+    "CName": "幫派",
+    "Description": "路上時常見到的兇神惡煞，習慣攜帶球棒、匕首、開山刀、手槍，以霸凌他人為樂\n\n偶爾連平民也會一起加入，除暴安良的第一目標"
+  },
+  {
+    "ID": 2,
+    "Name": "RogueLeague",
+    "CName": "盜賊聯盟",
+    "Description": ""
+  },
+  {
+    "ID": 3,
+    "Name": "SkillMaster",
+    "CName": "技能大師",
+    "Description": ""
+  },
+  {
+    "ID": 4,
+    "Name": "Aristocracy",
+    "CName": "貴族",
+    "Description": ""
+  },
+  {
+    "ID": 5,
+    "Name": "Psychics",
+    "CName": "超能力者",
+    "Description": ""
+  },
+  {
+    "ID": 6,
+    "Name": "AO",
+    "CName": "有奈教",
+    "Description": ""
+  }
+]
