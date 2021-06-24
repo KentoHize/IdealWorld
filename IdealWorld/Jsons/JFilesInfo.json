@@ -372,7 +372,7 @@
         {
           "Name": "HiringRequireAlignment1Count",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -408,7 +408,7 @@
         {
           "Name": "HiringRequireAlignment2Count",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -444,7 +444,7 @@
         {
           "Name": "WorkingGoldReward",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -462,7 +462,7 @@
         {
           "Name": "WorkingReputationReward",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -480,7 +480,7 @@
         {
           "Name": "AttackPoint",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -516,7 +516,7 @@
         {
           "Name": "DefensePoint",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -534,7 +534,7 @@
         {
           "Name": "MentalDefensePoint",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -552,7 +552,7 @@
         {
           "Name": "Sex",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Choice",
           "Choices": [
             "m",
@@ -628,17 +628,17 @@
         {
           "Name": "JobTitle",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "String",
           "Choices": [],
           "FKTable": null,
           "FKColumn": null,
           "NumberOfRows": 1,
           "Display": true,
-          "RegularExpression": null,
-          "Description": null,
-          "MinValue": null,
-          "MaxValue": null,
+          "RegularExpression": "",
+          "Description": "",
+          "MinValue": "",
+          "MaxValue": "",
           "MaxLength": 0,
           "AutoGenerateKey": false,
           "IsUnique": false
@@ -646,17 +646,17 @@
         {
           "Name": "WeaponName",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "String",
           "Choices": [],
           "FKTable": null,
           "FKColumn": null,
           "NumberOfRows": 1,
           "Display": true,
-          "RegularExpression": null,
-          "Description": null,
-          "MinValue": null,
-          "MaxValue": null,
+          "RegularExpression": "",
+          "Description": "",
+          "MinValue": "",
+          "MaxValue": "",
           "MaxLength": 0,
           "AutoGenerateKey": false,
           "IsUnique": false
@@ -682,7 +682,7 @@
         {
           "Name": "Skill1Rank",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -718,7 +718,7 @@
         {
           "Name": "Skill2Rank",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -754,13 +754,13 @@
         {
           "Name": "Skill3Rank",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
           "FKColumn": null,
           "NumberOfRows": 1,
-          "Display": false,
+          "Display": true,
           "RegularExpression": "",
           "Description": "",
           "MinValue": "",
@@ -790,7 +790,7 @@
         {
           "Name": "Ability1Var1",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -808,7 +808,7 @@
         {
           "Name": "Ability1Var2",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -844,7 +844,7 @@
         {
           "Name": "Ability2Var1",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -862,7 +862,7 @@
         {
           "Name": "Ability2Var2",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -898,7 +898,7 @@
         {
           "Name": "Ability3Var1",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -916,7 +916,7 @@
         {
           "Name": "Ability3Var2",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -952,7 +952,7 @@
         {
           "Name": "Ability4Var1",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -970,7 +970,7 @@
         {
           "Name": "Ability4Var2",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -1006,7 +1006,7 @@
         {
           "Name": "Ability5Var1",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
@@ -1024,7 +1024,7 @@
         {
           "Name": "Ability5Var2",
           "IsKey": false,
-          "IsNullable": false,
+          "IsNullable": true,
           "Type": "Integer",
           "Choices": [],
           "FKTable": null,
