@@ -1,0 +1,20 @@
+[
+  {
+    "ID": 1,
+    "ProfessionID": 1,
+    "Name": "Thug",
+    "CName": "惡棍"
+  },
+  {
+    "ID": 2,
+    "ProfessionID": 1,
+    "Name": "Smuggler",
+    "CName": "走私者"
+  },
+  {
+    "ID": 3,
+    "ProfessionID": 2,
+    "Name": "Whore",
+    "CName": "妓女"
+  }
+]

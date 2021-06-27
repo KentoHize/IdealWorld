@@ -1,0 +1,26 @@
+[
+  {
+    "ID": 1,
+    "RaceID": 1,
+    "Name": "Black",
+    "CName": "黑人"
+  },
+  {
+    "ID": 2,
+    "RaceID": 1,
+    "Name": "White",
+    "CName": "白人"
+  },
+  {
+    "ID": 3,
+    "RaceID": 1,
+    "Name": "East Asian",
+    "CName": "黃種人"
+  },
+  {
+    "ID": 4,
+    "RaceID": 1,
+    "Name": "Brown",
+    "CName": "棕人"
+  }
+]
