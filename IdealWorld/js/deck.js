@@ -1,22 +1,26 @@
 ﻿
 class Deck {
-    _data = [];
+    #_data;
 
-    constructor(data = null) {
-        this._data = data;
+    constructor(data = []) {
+        this.#_data = data;
     }
 
     add(card) {
-        this._data.push(card);
+        this.#_data.push(card);
     }    
     
     shuffle() {
-        let r = Math.random() * this._data.length;
-        
+        for (let i = 0; i < this.#_data.length; i++) {
+            let r = Math.floor(Math.random() * this.#_data.length);
+            let d = this.#_data[i];
+            this.#_data[i] = this.#_data[r];
+            this.#_data[r] = d;
+        }
     }
 
     draw() {
-        return this._data.shift();
+        return this.#_data.shift();
     }
 }
 
