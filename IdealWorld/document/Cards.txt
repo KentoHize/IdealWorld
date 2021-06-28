@@ -1,0 +1,39 @@
+起始金額
+
+Type
+Character Card (角色卡)
+可以直接被召喚
+
+Leader Card(英雄卡)
+需要有特殊的條件才能召喚
+
+Equipment Card(裝備卡)
+代表裝備
+
+Strategy Card(策略卡)
+能對手發動策略的策略卡
+
+Enchantment Card(結界卡)
+常時對我方造成效果的防禦型卡片
+
+Instant Card(瞬間戰術卡)
+能夠被即時使用的戰術卡
+
+Hiring Cost(雇用費用)
+Hiring Condition(雇用條件)
+Working Gold Reward(工作獎金)
+Working Reputation Reward(工作名聲獎勵)
+
+Attack Point(攻擊數字)
+Attack Type(攻擊型態)
+
+Defense Point(防禦數字)
+Mental Defense Point(精神防禦數字)
+Ability(能力)
+
+初始值
+Money
+Facility Hitpoint
+Morale
+Reputation
+

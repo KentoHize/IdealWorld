@@ -1,0 +1,22 @@
+[
+  {
+    "ID": 1,
+    "Name": "Melee - Unarmed",
+    "CName": "近戰 - 空手"
+  },
+  {
+    "ID": 2,
+    "Name": "Melee - Club",
+    "CName": "近戰 - 敲擊"
+  },
+  {
+    "ID": 3,
+    "Name": "Melee - Stab",
+    "CName": "近戰 - 刺擊"
+  },
+  {
+    "ID": 4,
+    "Name": "Range - Pistol",
+    "CName": "遠距 - 手槍"
+  }
+]

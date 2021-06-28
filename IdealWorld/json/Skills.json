@@ -1,0 +1,14 @@
+[
+  {
+    "ID": 1,
+    "Name": "Intimidate",
+    "CName": "威嚇",
+    "KeyAttribute": "Strength"
+  },
+  {
+    "ID": 2,
+    "Name": "Seduce",
+    "CName": "色誘",
+    "KeyAttribute": "Appearance"
+  }
+]

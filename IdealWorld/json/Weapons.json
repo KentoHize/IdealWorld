@@ -1,0 +1,22 @@
+[
+  {
+    "ID": 1,
+    "Name": "Fist",
+    "CName": "拳頭"
+  },
+  {
+    "ID": 2,
+    "Name": "Club",
+    "CName": "棍棒"
+  },
+  {
+    "ID": 3,
+    "Name": "Knife",
+    "CName": "小刀"
+  },
+  {
+    "ID": 4,
+    "Name": "Pistol",
+    "CName": "手槍"
+  }
+]
