@@ -7,13 +7,30 @@ class IWSystem {
     PublicArea;
     Actions;
 
+    ActivePlayer;
+
     constructor() {
-
+        //initialize
+        const drawAction = new Action();
+        drawAction.ID = 1;
+        drawAction.doAction =
+            playerIndex => {
+                this.Players[playerIndex].Area.HandCards.add(
+                    this.Players[playerIndex].Area.Deck.draw());
+        }
     }
 
-    showOK() {
-        alert('ok');
+    
+
+    executeAction(playerID, action) {
+        //執行Action並把它紀錄下來
+        alert(action);
     }
+
+    listAllAction(playerID) {
+
+    }
+    
 }
 
 export { IWSystem };

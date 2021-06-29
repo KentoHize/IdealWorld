@@ -5,7 +5,7 @@ import { IWSystem } from "./IWSystem.js";
     
 
     var iwSystem = new IWSystem();
-    iwSystem.showOK();
+    
 
     var d = new CardsContainer([]);
     //d.load()

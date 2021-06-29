@@ -1,5 +1,4 @@
-﻿class Action {
-    PlayerID;
+﻿class Action {    
     ID;
 
     doAction;//function
@@ -10,12 +9,5 @@
     
 
 }
-
-(() => {
-    let actionDraw = new Action();
-    actionDraw.doAction = function (playerID, Players, PublicArea) {
-        
-    }
-}();
 
 export { Action };
