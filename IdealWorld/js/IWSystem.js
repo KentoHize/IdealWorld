@@ -5,7 +5,7 @@ class IWSystem {
 
     Players;
     PublicArea;
-    Actions;
+    Actions = [];
 
     ActivePlayer;
 
@@ -17,7 +17,8 @@ class IWSystem {
             playerIndex => {
                 this.Players[playerIndex].Area.HandCards.add(
                     this.Players[playerIndex].Area.Deck.draw());
-        }
+            }
+        this.Actions.push(drawAction);
     }
 
     

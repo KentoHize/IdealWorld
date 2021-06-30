@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "ID": 1,
+    "CardNo": "STM001",
+    "Name": "Resource Recycling",
+    "CName": "資源回收",
+    "Rank": "1",
+    "RequireSkill1": null,
+    "RequireSkill1Rank": null,
+    "RequireSkill2": null,
+    "RequireSkill2Rank": null,
+    "RequireSkill3": null,
+    "RequireSkill3Rank": null,
+    "RequireSkill4": null,
+    "RequireSkill4Rank": null,
+    "GoldReward": 2000,
+    "ReputationReward": 1,
+    "Ability1": null,
+    "Ability1Var1": null,
+    "Ability1Var2": null
+  }
+]

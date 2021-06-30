@@ -18,5 +18,35 @@
     "ID": 4,
     "Name": "Pistol",
     "CName": "手槍"
+  },
+  {
+    "ID": 5,
+    "Name": "Machine Pistol",
+    "CName": "全自動手槍"
+  },
+  {
+    "ID": 6,
+    "Name": "Revolver",
+    "CName": "左輪手槍"
+  },
+  {
+    "ID": 7,
+    "Name": "SMG",
+    "CName": "衝鋒槍"
+  },
+  {
+    "ID": 8,
+    "Name": "Shotgun",
+    "CName": "霰彈槍"
+  },
+  {
+    "ID": 9,
+    "Name": "Assault Rifle",
+    "CName": "突襲步槍"
+  },
+  {
+    "ID": 10,
+    "Name": "Sniper Rifle",
+    "CName": "狙擊步槍"
   }
 ]

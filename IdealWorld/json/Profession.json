@@ -8,5 +8,10 @@
     "ID": 2,
     "Name": "Prostitute Group",
     "CName": "賣淫集團"
+  },
+  {
+    "ID": 3,
+    "Name": "Student",
+    "CName": "學生"
   }
 ]
