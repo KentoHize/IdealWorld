@@ -10,5 +10,17 @@
     "Name": "Seduce",
     "CName": "色誘",
     "KeyAttribute": "Appearance"
+  },
+  {
+    "ID": 3,
+    "Name": "Computer Repair",
+    "CName": "電腦維修",
+    "KeyAttribute": "Experience"
+  },
+  {
+    "ID": 4,
+    "Name": "Mobile Phone Repair",
+    "CName": "手機維修",
+    "KeyAttribute": "Experience"
   }
 ]

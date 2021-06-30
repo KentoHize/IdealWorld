@@ -1,5 +1,8 @@
 ﻿class Player {
 
+    FacilityHitpoint;
+    Gold;
+    Reputation;
     Area;
     constructor() {
 
