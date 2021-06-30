@@ -2,21 +2,37 @@
   {
     "ID": 1,
     "Name": "Melee - Unarmed",
-    "CName": "近戰 - 空手"
+    "CName": "近戰 - 空手",
+    "Description": ""
   },
   {
     "ID": 2,
     "Name": "Melee - Club",
-    "CName": "近戰 - 敲擊"
+    "CName": "近戰 - 敲擊",
+    "Description": ""
   },
   {
     "ID": 3,
     "Name": "Melee - Stab",
-    "CName": "近戰 - 刺擊"
+    "CName": "近戰 - 刺擊",
+    "Description": ""
   },
   {
     "ID": 4,
     "Name": "Range - Pistol",
-    "CName": "遠距 - 手槍"
+    "CName": "遠距 - 手槍",
+    "Description": ""
+  },
+  {
+    "ID": 5,
+    "Name": "Range - Rifle",
+    "CName": "遠距 - 步槍",
+    "Description": ""
+  },
+  {
+    "ID": 6,
+    "Name": "Range - Snipper",
+    "CName": "遠距 - 狙擊槍",
+    "Description": ""
   }
 ]

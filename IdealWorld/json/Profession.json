@@ -13,5 +13,15 @@
     "ID": 3,
     "Name": "Student",
     "CName": "學生"
+  },
+  {
+    "ID": 4,
+    "Name": "Office Worker",
+    "CName": "上班族"
+  },
+  {
+    "ID": 5,
+    "Name": "Technician",
+    "CName": "技工"
   }
 ]

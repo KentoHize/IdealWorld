@@ -3,6 +3,18 @@
     "ID": 1,
     "Name": "Flying",
     "CName": "飛行",
-    "Description": ""
+    "Description": "飛行角色只有遠距攻擊能夠阻擋"
+  },
+  {
+    "ID": 2,
+    "Name": "Sneak",
+    "CName": "潛行",
+    "Description": "潛行角色執行任務時不會被攻擊"
+  },
+  {
+    "ID": 3,
+    "Name": "Hide",
+    "CName": "躲藏",
+    "Description": "躲藏角色沒辦法成為技能的目標"
   }
 ]
