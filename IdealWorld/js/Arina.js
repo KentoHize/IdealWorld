@@ -19,7 +19,7 @@ function ChangeDateToArDate(date)
     return `${parseInt(data[1])},&nbsp;${parseInt(data[2])},&nbsp;Ar.${parseInt(data[0])}`;
 }
 
-function GetGetParameterValue(name) {
+function GetUrlParameterValue(name) {
     let str = location.search.split('?');
     if (str.length == 1)
         return null;
@@ -29,3 +29,9 @@ function GetGetParameterValue(name) {
     str = str[1].split('&');
     return str[0];
 }
+
+//var DocumentReady;
+
+//document.addEventListener("DOMContentLoaded", function (event) {
+//    DocumentReady();
+//});

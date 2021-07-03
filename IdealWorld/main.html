@@ -2,14 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Ideal World測試</title>    
+    <title>Ideal World測試</title>
     <script src="js/Arina.js"></script>
     <script>
-        alert(GetGetParameterValue('p1Hitpoint'));
-        alert(GetGetParameterValue('p2Hitpoint'));
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            refreshMainTable();
+        });
+
+        function refreshMainTable() {
+            var mt = document.getElementById("mainTable");
+            mt.style = "width:1200px; height:700px; border-width:1px; border-style:solid";
+            var tr, td, textNode;
+            tr = document.createElement(`tr`);
+            mt.appendChild(tr);
+            td = document.createElement(`td`);
+            tr.appendChild(td);
+            textNode = document.createTextNode('abc');
+            td.appendChild(textNode);
+        }
     </script>
 </head>
 <body>
+    <div>
+        <table id="mainTable">
+        </table>
+    </div>
     <a href="index.html">Back to index</a>
+    
 </body>
 </html>

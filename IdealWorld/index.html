@@ -3,21 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <title>IW起始設定</title>
-    <script type="module" src="js/main.js"></script></head>
+    <style>
+        .indent
+        {
+            text-indent: 2em;
+        }
+    </style>
+    <script type="module" src="js/main.js"></script>
+</head>
+
 <body>
     <div style="text-align:center">Ideal World測試</div>
     <br />
     <div style="margin:50px 50px 50px 50px">
         <form name="conditionForm" action="main.html" method="get" />
         <p>起始條件</p>
-        <p>
-            Player1 Hitpoint:
-            <input name="p1Hitpoint" type="text" value="20" />
-        </p>
-        <p>
-            Player2 Hitpoint:
-            <input name="p2Hitpoint" type="text" value="20" />
-        </p>
+        <article>
+            <p>Player1</p>            
+            <p class="indent">
+                Hitpoint:
+                <input name="p1Hitpoint" type="text" value="20" />
+            </p>
+            <p class="indent">
+                Money:
+                <input name="p1Money" type="text" value="500" />
+            </p>
+            <p class="indent">
+                Reputation:
+                <input name="p1Reputation" type="text" value="0" />
+            </p>
+        </article>
+        <article>
+            <p>Player2</p>
+            <p class="indent">
+                Hitpoint:
+                <input name="p2Hitpoint" type="text" value="20" />
+            </p>
+            <p class="indent">
+                Money:
+                <input name="p2Money" type="text" value="500" />
+            </p>
+            <p class="indent">
+                Reputation:
+                <input name="p2Reputation" type="text" value="0" />
+            </p>
+        </article>
         <input name="commit" value="開始" type="submit" />
     </div>
 </body>
