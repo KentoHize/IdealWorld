@@ -12,8 +12,29 @@ class CardsContainer {
        this.#_data = jsonObject;        
     }
 
+    save() {
+        return this.#_data;
+    }
+
     add(card) {
         this.#_data.push(card);
+    }
+
+    addBottom(card) {
+        this.#_data.unshift(card);
+    }
+
+    moveToTop(target, index = 0, count = 1) {
+        target.add(this.#_data.splice(index, count));
+    }
+
+    moveToBottom(target, index = 0, count = 1) {
+        target.addBottom(this.#_data.splice(index, count));
+    }
+
+    moveAndShuffle(target, index = 0, count = 1) {
+        target.add(this.#_data.splice(index, count));
+        target.shuffle();
     }
 
     get Legnth() {
@@ -31,13 +52,13 @@ class CardsContainer {
         }
     }
 
-    draw() {
+    draw(index = 0) {
         return this.#_data.shift();
     }
 
-    //set visibleFor(playerID) {
-
-    //}
+    drawBottom() {
+        return this.#_data.pop();
+    }
 }
 
 export { CardsContainer };
