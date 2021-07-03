@@ -1,4 +1,5 @@
 ﻿using System;
+using Aritiafel.Characters.Heroes;
 
 namespace BackupProject
 {
@@ -6,7 +7,9 @@ namespace BackupProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Tina.SaveProject(ProjectChoice.IdealWorld);
+            Console.WriteLine("Back up completed.");
+            Console.ReadKey();
         }
     }
 }

@@ -17,9 +17,9 @@ import { IWSystem } from "./IWSystem.js";
         if (xhr.status == 200) {
             d.load(xhr.response)            
             d.shuffle();
-            alert(d.Legnth);
-            alert(d.draw().Name);
-            alert(d.draw().Name);
+            //alert(d.Legnth);
+            //alert(d.draw().Name);
+            //alert(d.draw().Name);
         }
         else
             alert(`Can't read cards.`);
