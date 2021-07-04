@@ -21,15 +21,13 @@
         });
 
         function showSampleCard() {
-            const card1 = { "name": "Card1", "ap": 3, "dp": 3, "mdp": 3 };
-            const card2 = { "name": "Card2", "ap": 1, "dp": 2, "mdp": 1 };
-            const card3 = { "name": "Card3", "ap": 1, "dp": 1, "mdp": 1 };
+            const card1 = { "name": "Card1", "ap": 3, "dp": 3, "mdp": 3, "description": "this is card 1." };
+            const card2 = { "name": "Card2", "ap": 1, "dp": 2, "mdp": 1, "description": "this is card 2." };
+            const card3 = { "name": "Card3", "ap": 1, "dp": 1, "mdp": 1, "description": "this is card 3." };
 
             let cards = [card1, card2, card3];
 
-            iwDisplay.showCardDetail(card1);
-            //var mt = document.getElementById("mainTable");
-            //mt.childNodes[2].childNodes[2].appendChild(displayCard(cards));
+            iwDisplay.showCardDetail(card1);            
         }
 
 

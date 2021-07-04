@@ -31,18 +31,18 @@ class IWDisplay {
 
     initialize() {
         this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1305px; height:900px; border-style:solid; border-width:2px;`);
-        this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:900px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:900px; border-style:solid; border-width:1px; text-align:center; vertical-align: middle;`);
         this.AddCssRule(`.CardDetail`, `width:300px; height:400px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.CardDetailTop`, `width:300px; height:50px;`);
+        this.AddCssRule(`.CardDetailTop`, `width:300px; height:50px; line-height:50px;`);
         this.AddCssRule(`.CardDetailTopLeft`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailTopMiddle`, `float:left; width:200px; height:50px;`);
         this.AddCssRule(`.CardDetailTopRight`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailMiddle`, `width:300px; height:300px;`);
-        this.AddCssRule(`.CardDetailBottom`, `width:300px; height:50px;`);
+        this.AddCssRule(`.CardDetailBottom`, `width:300px; height:50px; line-height:50px;`);
         this.AddCssRule(`.CardDetailBottomLeft`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailBottomMiddle`, `float:left; width:200px; height:50px;`);
         this.AddCssRule(`.CardDetailBottomRight`, `float:left; width:50px; height:50px;`);
-        this.AddCssRule(`.CardDescription`, `width:300px; height:500px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.CardDescription`, `width:288px; height:488px; border-style:solid; border-width:1px; padding:5px; text-align:left; text-indent:2em;`);
         this.AddCssRule(`.RightWindow`, `float:left; width:1000px; height:900px;`);
         this.AddCssRule(`.UpWindow`, `width:1010px; height:700px;`);
         this.AddCssRule(`.MainWindow`, `float:left; width:800px; height:700px; border-style:solid; border-width:1px;`);
@@ -168,6 +168,23 @@ class IWDisplay {
 
     showCardDetail(card) {
 
+        //console.log(CardDetailTopRight);
+        this.#doc.getElementById(`CardDetailTopRight`).textContent = card.mdp;
+        this.#doc.getElementById(`CardDetailBottomRight`).textContent = card.dp;
+        this.#doc.getElementById(`CardDetailBottomMiddle`).textContent = card.name;
+        this.#doc.getElementById(`CardDetailBottomLeft`).textContent = card.ap;
+        this.#doc.getElementById(`CardDescription`).textContent = card.description;
+        
+
+        //CardDetailTopRight.replaceChildren();
+        //CardDetailTopRight.appendChild(txtNode);
+
+        //txtNode = this.#doc.createTextNode(card.dp);
+        //CardDetailBottomRight.replaceChildren();
+        //CardDetailBottomRight.appendChild(txtNode);
+
+        //CardDetailBottomLeft.innerHTML = `${card.ap}`;
+        //CardDetailBottomMiddle.innerHTML = `${card.name}`;
         //var d = document.getElementById(aa);
         //d.style = 
 
