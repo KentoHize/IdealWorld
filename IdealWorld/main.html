@@ -4,49 +4,6 @@
     <meta charset="utf-8" />
     <title>Ideal World測試</title>
     <script src="js/Arina.js"></script>
-    <!--<style type="text/css">
-        .Card
-        {
-            width:90px;
-            height:90px;
-            text-align:center;
-        }
-
-        .CardTop{
-            width:inherit;
-            height:20px;
-        }
-
-        .CardMiddle{
-            width:inherit;
-            height:50px;
-        }
-
-        .CardBottom
-        {   
-            height:20px;
-            width:inherit;
-            text-align:center;
-            /*position:relative;*/
-        }
-
-        .CardSlot
-        {
-            width:100px;
-            height:100px;
-            text-align:center;
-        }
-
-        .MissionDeckSlot
-        {
-            text-align:center;
-        }
-
-        .Window
-        {
-            margin:100px 200px 200px 200px;
-        }
-    </style>-->
     <script type="module">        
         import { IWDisplay } from "./js/Display/IWDisplay.js";
         import { IWSystem } from "./js/System/IWSystem.js";
@@ -70,117 +27,14 @@
 
             let cards = [card1, card2, card3];
 
-            IWDisplay.showCard(cards);
+            iwDisplay.showCardDetail(card1);
             //var mt = document.getElementById("mainTable");
             //mt.childNodes[2].childNodes[2].appendChild(displayCard(cards));
         }
 
-        function displayCard(cards) {
-            let div = document.createElement(`div`);
-            div.className = `Card`;
-            let divTop = document.createElement(`div`);
-            divTop.className = `CardTop`;
-            div.appendChild(divTop);
-            let divMiddle = document.createElement(`div`);            
-            divMiddle.className = `CardMiddle`;
-            div.appendChild(divMiddle);
-            let divBottom = document.createElement(`div`);
-            divBottom.innerHTML = cards[0].name;
-            divBottom.className = `CardBottom`;
-            div.appendChild(divBottom);
-            return div;
-        }
-
 
         function refreshMainTable() {
-            
-
-            var mt = document.getElementById("mainTable");
-            mt.style = "width:900px; height:700px;";
-            mt.border = "1";
-            //border - block - width: 1px; border - style: solid";
-            var tr, td, textNode;
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 7; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                else
-                    td.rowSpan = 3;
-                tr.appendChild(td);
-            }   
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 6; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                if (i == 5) {
-                    textNode = document.createTextNode(`Player2's Deck`);
-                    td.appendChild(textNode);
-                }
-                tr.appendChild(td);
-            }
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 6; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                tr.appendChild(td);
-            }
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 7; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                else {
-                    td.className = `MissionDeckSlot`;
-                    textNode = document.createTextNode(`Mission Decks`);
-                    td.appendChild(textNode);
-                }
-                tr.appendChild(td);
-            }
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 7; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                else
-                    td.rowSpan = 3;
-                tr.appendChild(td);
-            }
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 6; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                if (i == 5) {
-                    textNode = document.createTextNode(`Player1's Deck`);
-                    td.appendChild(textNode);
-                }
-                    
-                tr.appendChild(td);
-            }
-
-            tr = document.createElement(`tr`);
-            mt.appendChild(tr);
-            for (let i = 0; i < 6; i++) {
-                td = document.createElement(`td`);
-                if (i != 6)
-                    td.className = `CardSlot`;
-                tr.appendChild(td);
-            }
-            
+      
         }
     </script>
 </head>
