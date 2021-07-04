@@ -30,20 +30,28 @@ class IWDisplay {
     }
 
     initialize() {
-        this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1100px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:700px;`);
+        this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1110px; height:900px; border-style:solid; border-width:2px;`);
+        this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:900px; border-style:solid; border-width:1px;`);
         this.AddCssRule(`.CardDetail`, `width:300px; height:400px;`);
         this.AddCssRule(`.CardDetailTop`, `width:300px; height:50px;`);
+        this.AddCssRule(`.CardDetailTopLeft`, `float:left; width:50px; height:50px;`);
+        this.AddCssRule(`.CardDetailTopMiddle`, `float:left; width:200px; height:50px;`);
+        this.AddCssRule(`.CardDetailTopRight`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailMiddle`, `width:300px; height:300px;`);
         this.AddCssRule(`.CardDetailBottom`, `width:300px; height:50px;`);
-        this.AddCssRule(`.CardDescription`, `width:300px; height:300px;`);
-        this.AddCssRule(`.MainWindow`, `float:left; width:500px; height:700px;`);        
-        this.AddCssRule(`.PlayerDetailWindow`, `float:left; width:300px; height:700px;`);        
-        this.AddCssRule(`.UpperLayer`, `width:1100px; height:200px;`);
-        this.AddCssRule(`.MiddleLayer`, `width:1100px; height:700px;`);
-        this.AddCssRule(`.LowerLayer`, `width:1100px; height:200px;`);
-        this.AddCssRule(`.EnemyHandWindow`, `width:700px; height:200px; margin:auto;`);
-        this.AddCssRule(`.PlayerHandWindow`, `width:700px; height:200px; margin:auto;`);
+        this.AddCssRule(`.CardDetailBottomLeft`, `float:left; width:50px; height:50px;`);
+        this.AddCssRule(`.CardDetailBottomMiddle`, `float:left; width:200px; height:50px;`);
+        this.AddCssRule(`.CardDetailBottomRight`, `float:left; width:50px; height:50px;`);
+        this.AddCssRule(`.CardDescription`, `width:300px; height:500px;`);
+        this.AddCssRule(`.RightWindow`, `float:left; width:800px; height:900px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.UpWindow`, `width:810px; height:700px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.MainWindow`, `float:left; width:500px; height:700px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.PlayerDetailWindow`, `float:left; width:300px; height:700px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.UpperLayer`, `width:500px; height:100px;`);
+        this.AddCssRule(`.MiddleLayer`, `width:500px; height:600px;`);
+/*        this.AddCssRule(`.LowerLayer`, `width:500px; height:200px;`);*/
+        this.AddCssRule(`.EnemyHandWindow`, `width:500px; height:100px; margin:auto;`);
+        this.AddCssRule(`.PlayerHandWindow`, `width:800px; height:200px; margin:auto;`);
 
         let upperLayer = this.#doc.createElement(`div`);
         upperLayer.id = `UpperLayer`;
@@ -53,9 +61,9 @@ class IWDisplay {
         middleLayer.id = `MiddleLayer`;
         middleLayer.className = `MiddleLayer`;
         
-        let lowerLayer = this.#doc.createElement(`div`);
-        lowerLayer.id = `LowerLayer`;
-        lowerLayer.className = `LowerLayer`;        
+        //let lowerLayer = this.#doc.createElement(`div`);
+        //lowerLayer.id = `LowerLayer`;
+        //lowerLayer.className = `LowerLayer`;        
 
         let div = this.#doc.createElement(`div`);
         div.id = `EnemyHandWindow`;
@@ -129,26 +137,37 @@ class IWDisplay {
 
 
 
+        let rw = this.#doc.createElement(`div`);
+        rw.id = `RightWindow`;
+        rw.className = `RightWindow`;
+        this.DisplayWindow.appendChild(rw);
+
+        let uw = this.#doc.createElement(`div`);
+        uw.id = `UpWindow`;
+        uw.className = `UpWindow`;
+        rw.appendChild(uw);
+
         div = this.#doc.createElement(`div`);
         div.id = `MainWindow`;
         div.className = `MainWindow`;
+        uw.appendChild(div);
         this.MainWindow = div;
-        this.DisplayWindow.appendChild(div);
         this.MainWindow.appendChild(upperLayer);
         this.MainWindow.appendChild(middleLayer);
-        this.MainWindow.appendChild(lowerLayer);
+        /*this.MainWindow.appendChild(lowerLayer);*/
+
 
         div = this.#doc.createElement(`div`);
         div.id = `PlayerDetailWindow`;
         div.className = `PlayerDetailWindow`;
         this.PlayerDetailWindow = div;
-        this.DisplayWindow.appendChild(div);
+        uw.appendChild(div);// DisplayWindow.appendChild(div);
 
         div = this.#doc.createElement(`div`);
         div.id = `PlayerHandWindow`;
         div.className = `PlayerHandWindow`;
         this.PlayerHandWindow = div;
-        lowerLayer.appendChild(div);
+        rw.appendChild(div);
         
     }
 
