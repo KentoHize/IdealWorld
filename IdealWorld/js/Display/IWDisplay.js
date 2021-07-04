@@ -30,9 +30,9 @@ class IWDisplay {
     }
 
     initialize() {
-        this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1110px; height:900px; border-style:solid; border-width:2px;`);
+        this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1305px; height:900px; border-style:solid; border-width:2px;`);
         this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:900px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.CardDetail`, `width:300px; height:400px;`);
+        this.AddCssRule(`.CardDetail`, `width:300px; height:400px; border-style:solid; border-width:1px;`);
         this.AddCssRule(`.CardDetailTop`, `width:300px; height:50px;`);
         this.AddCssRule(`.CardDetailTopLeft`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailTopMiddle`, `float:left; width:200px; height:50px;`);
@@ -42,16 +42,16 @@ class IWDisplay {
         this.AddCssRule(`.CardDetailBottomLeft`, `float:left; width:50px; height:50px;`);
         this.AddCssRule(`.CardDetailBottomMiddle`, `float:left; width:200px; height:50px;`);
         this.AddCssRule(`.CardDetailBottomRight`, `float:left; width:50px; height:50px;`);
-        this.AddCssRule(`.CardDescription`, `width:300px; height:500px;`);
-        this.AddCssRule(`.RightWindow`, `float:left; width:800px; height:900px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.UpWindow`, `width:810px; height:700px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.MainWindow`, `float:left; width:500px; height:700px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.PlayerDetailWindow`, `float:left; width:300px; height:700px; border-style:solid; border-width:1px;`);
-        this.AddCssRule(`.UpperLayer`, `width:500px; height:100px;`);
-        this.AddCssRule(`.MiddleLayer`, `width:500px; height:600px;`);
+        this.AddCssRule(`.CardDescription`, `width:300px; height:500px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.RightWindow`, `float:left; width:1000px; height:900px;`);
+        this.AddCssRule(`.UpWindow`, `width:1010px; height:700px;`);
+        this.AddCssRule(`.MainWindow`, `float:left; width:800px; height:700px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.PlayerDetailWindow`, `float:left; width:200px; height:700px; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.UpperLayer`, `width:800px; height:100px;`);
+        this.AddCssRule(`.MiddleLayer`, `width:800px; height:600px;`);
 /*        this.AddCssRule(`.LowerLayer`, `width:500px; height:200px;`);*/
-        this.AddCssRule(`.EnemyHandWindow`, `width:500px; height:100px; margin:auto;`);
-        this.AddCssRule(`.PlayerHandWindow`, `width:800px; height:200px; margin:auto;`);
+        this.AddCssRule(`.EnemyHandWindow`, `width:800px; height:100px; margin:auto; border-style:solid; border-width:1px;`);
+        this.AddCssRule(`.PlayerHandWindow`, `width:1000px; height:200px; margin:auto; border-style:solid; border-width:1px;`);
 
         let upperLayer = this.#doc.createElement(`div`);
         upperLayer.id = `UpperLayer`;
@@ -132,11 +132,6 @@ class IWDisplay {
         cd2.className = `CardDescription`;        
         this.CardDetailWindow.appendChild(cd2);
 
-
-        
-
-
-
         let rw = this.#doc.createElement(`div`);
         rw.id = `RightWindow`;
         rw.className = `RightWindow`;
@@ -161,7 +156,7 @@ class IWDisplay {
         div.id = `PlayerDetailWindow`;
         div.className = `PlayerDetailWindow`;
         this.PlayerDetailWindow = div;
-        uw.appendChild(div);// DisplayWindow.appendChild(div);
+        uw.appendChild(div);
 
         div = this.#doc.createElement(`div`);
         div.id = `PlayerHandWindow`;
