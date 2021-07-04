@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <title>Ideal World測試</title>
     <script src="js/Arina.js"></script>
-    <script type ="module" src="js/main.js"></script>
-    <style type="text/css">
+    <!--<style type="text/css">
         .Card
         {
             width:90px;
@@ -47,13 +46,21 @@
         {
             margin:100px 200px 200px 200px;
         }
-    </style>
-    <script>
-
+    </style>-->
+    <script type="module">        
+        import { IWDisplay } from "./js/Display/IWDisplay.js";
+        import { IWSystem } from "./js/System/IWSystem.js";
+        var iwDisplay;
+        var iwSystem;
         document.addEventListener("DOMContentLoaded", function (event) {
-            refreshMainTable();
+            //refreshMainTable();
+            //showSampleCard();
+            
 
+            iwSystem = new IWSystem();
+            iwDisplay = new IWDisplay(iwSystem, document, document.getElementById(`mainWindow`));            
             showSampleCard();
+
         });
 
         function showSampleCard() {
@@ -63,8 +70,9 @@
 
             let cards = [card1, card2, card3];
 
-            var mt = document.getElementById("mainTable");
-            mt.childNodes[2].childNodes[2].appendChild(displayCard(cards));
+            IWDisplay.showCard(cards);
+            //var mt = document.getElementById("mainTable");
+            //mt.childNodes[2].childNodes[2].appendChild(displayCard(cards));
         }
 
         function displayCard(cards) {
@@ -177,11 +185,12 @@
     </script>
 </head>
 <body>
-    <div class="Window">
-        <div class="EnemyHand"></div>
+    <div id="mainWindow" class="Window">
+        <!--<div class="EnemyHand"></div>
         <table id="mainTable">
         </table>
         <div class="MyHand"></div>
+        <div class="Sample">test</div>-->
     </div>
     <a href="index.html">Back to index</a>
     
