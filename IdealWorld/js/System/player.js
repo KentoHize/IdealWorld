@@ -4,6 +4,7 @@
     Gold;
     Reputation;
     Area;
+    HandCards;
     constructor() {
 
     }
