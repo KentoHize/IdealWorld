@@ -172,6 +172,11 @@ class IWDisplayInitializer {
         div.className = `EnemyStage`;
         ea.appendChild(div);
 
+        div = this.#doc.createElement(`div`);
+        div.id = `EnemyStage`;
+        div.className = `EnemyStage`;
+        ea.appendChild(div);
+
         let ear = this.#doc.createElement(`div`);
         ear.id = `EnemyAreaRight`;
         ear.className = `EnemyAreaRight`;
