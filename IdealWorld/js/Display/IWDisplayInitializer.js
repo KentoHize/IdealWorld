@@ -7,10 +7,10 @@ class IWDisplayInitializer {
     static initialize(iwSystem, document, displayWindow) {
         IWDisplayInitializer.#doc = document;
         IWDisplayInitializer.DisplayWindow = displayWindow;
-        IWDisplayInitializer.createScreen2();
+        IWDisplayInitializer.createScreen();
     }
 
-    static createScreen2() {
+    static createScreen() {
 
         let newDoc = new Doc();
         let style = newDoc.createStyle(`Window`);
@@ -37,7 +37,12 @@ class IWDisplayInitializer {
         styleCenterText.addRule(`vertical-align`, `middle`);
 
         let styleLineHeight50 = newDoc.createStyle(`LH50`);
-        styleLineHeight50.addRule(`line-height`,`50px`);
+        styleLineHeight50.addRule(`line-height`, `50px`);
+
+        let styleCD = newDoc.createStyle(`CD`)
+        styleCD.addRule(`text-indent`, `2em`);
+        styleCD.addRule(`text-align`, `left`);
+        styleCD.addRule(`padding`, `5px`);
         
         let cdw = Riana.CreateDiv(newDoc, `CardDetailWindow`, 300, 900,
             true, true, newDoc, styleCenterText);
@@ -62,7 +67,7 @@ class IWDisplayInitializer {
         let cdbr = Riana.CreateDiv(newDoc, `CardDetailBottomRight`, 50, 50,
             false, true, cdb);
         let cds = Riana.CreateDiv(newDoc, `CardDescription`, 300, 500,
-            true, false, cdw);
+            true, false, cdw, styleCD);
         let rw = Riana.CreateDiv(newDoc, `RightWindow`, 1000, 900,
             true, true, newDoc);
         let uw = Riana.CreateDiv(newDoc, `UpWindow`, 1000, 700,
