@@ -1,33 +1,62 @@
 ﻿//起始畫面
 //
 //
+import { Doc, Div } from "../Aritiafel/Ansrabrar.js";
 
 class IWDisplayInitializer {
-    static #doc;
-    static #style;
+    static #doc;    
     static DisplayWindow
 
     static initialize(iwSystem, document, displayWindow) {
-        this.#doc = document;        
-        let styleSheet = this.#doc.getElementsByTagName(`style`);        
-        if (styleSheet.length == 0) {
-            styleSheet = document.createElement(`style`);
-            styleSheet.type = `text/css`;
-            this.#doc.getElementsByTagName(`head`)[0].appendChild(styleSheet);
-        }
-
-        this.#style = this.#doc.styleSheets[0];
+        IWDisplayInitializer.#doc = document;
         IWDisplayInitializer.DisplayWindow = displayWindow;
-        IWDisplayInitializer.createScreen();
+        IWDisplayInitializer.createScreen2();
     }
 
-    static AddCssRule(sector, rule) {
-        this.#style.insertRule(`${sector}{ ${rule} }`, 0);
+    //static AddCssRule(sector, rule) {
+    //    this.#style.insertRule(`${sector}{ ${rule} }`, 0);
+    //}
+
+    static createScreen2() {
+        /*this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1305px; height:900px; border-style:solid; border-width:2px;`);*/
+
+        let newDoc = new Doc();
+        let style = newDoc.createStyle(`Window`);
+        style.addRule(`width`, `1296px`);
+        style.addRule(`height`, `896px`);
+        style.addRule(`border-style`, `solid`);
+        style.addRule(`border-width`, `2px`);
+        style.addRule(`background-color`, `yellow`);
+
+        //common style
+        let styleFloat = newDoc.createStyle(`Float`);
+        styleFloat.addRule(`float`, `left`);
+
+        let styleBorderLine = newDoc.createStyle(`BorderLine`);
+        styleBorderLine.addRule(`border-style`, `solid`);
+        styleBorderLine.addRule(`border-width`, `1px`);
+
+        let styleCenterText = newDoc.createStyle(`CenterText`);
+        styleCenterText.addRule(`text-align`, `center`);
+        styleCenterText.addRule(`vertical-align`, `middle`);
+
+        //cdw
+        let cdw = new Div(`CardDetailWindow`)
+        style = newDoc.createStyle(cdw.ID);        
+        style.addRule(`width`, `300px`);
+        style.addRule(`height`, `900px`);
+        cdw.Styles.push(style);
+        cdw.Styles.push(styleFloat);
+        cdw.Styles.push(styleBorderLine);
+        cdw.Styles.push(styleCenterText);
+        newDoc.Content = cdw;        
+
+        newDoc.printTo(IWDisplayInitializer.#doc, IWDisplayInitializer.DisplayWindow);
     }
 
     static createScreen() {
 
-        this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1305px; height:900px; border-style:solid; border-width:2px;`);
+        
         this.AddCssRule(`.CardDetailWindow`, `float:left; width:300px; height:900px; border-style:solid; border-width:1px; text-align:center; vertical-align: middle;`);
         this.AddCssRule(`.CardDetail`, `width:300px; height:400px; border-style:solid; border-width:1px;`);
         this.AddCssRule(`.CardDetailTop`, `width:300px; height:50px; line-height:50px;`);

@@ -15,13 +15,6 @@ class IWDisplay {
         IWDisplayInitializer.initialize(iwSystem, document, displayWindow);
     }
 
-   
-
-    initialize() {
-        
-
-    }
-
     showCardDetail(card) {
 
         //console.log(CardDetailTopRight);
