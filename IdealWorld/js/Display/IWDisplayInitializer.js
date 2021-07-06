@@ -1,8 +1,5 @@
-﻿//起始畫面
-//
-//
-import { Doc, Div } from "../Aritiafel/Ansrabrar.js";
-
+﻿import { Doc, Div, Text } from "../Aritiafel/Ansrabrar.js";
+import { Riana } from "../Aritiafel/Characters/Heroes/Riana.js"
 class IWDisplayInitializer {
     static #doc;    
     static DisplayWindow
@@ -13,12 +10,7 @@ class IWDisplayInitializer {
         IWDisplayInitializer.createScreen2();
     }
 
-    //static AddCssRule(sector, rule) {
-    //    this.#style.insertRule(`${sector}{ ${rule} }`, 0);
-    //}
-
     static createScreen2() {
-        /*this.AddCssRule(`#${this.DisplayWindow.id}`, `width:1305px; height:900px; border-style:solid; border-width:2px;`);*/
 
         let newDoc = new Doc();
         let style = newDoc.createStyle(`Window`);
@@ -26,63 +18,94 @@ class IWDisplayInitializer {
         style.addRule(`height`, `900px`);
         style.addRule(`border-style`, `solid`);
         style.addRule(`border-width`, `2px`);
-        style.addRule(`background-color`, `yellow`);
+        //style.addRule(`background-color`, `yellow`);
         style.addRule(`text-align`, `left`);
         style.addRule(`vertical-align`, `top`);
         style.addRule(`border-spacing`, `0`);
         //style.addRule(`box-sizing`, `border-box`);
 
-        //common style
-        let styleFloat = newDoc.createStyle(`Float`);
-        styleFloat.addRule(`float`, `left`);
 
-        let styleBorderLine = newDoc.createStyle(`BorderLine`);
-        styleBorderLine.addRule(`border-style`, `solid`);
-        styleBorderLine.addRule(`border-width`, `1px`);
-        styleBorderLine.addRule(`border-spacing`, `0`);
-        styleBorderLine.addRule(`box-sizing`, `border-box`);
+        Riana.Initiailize(newDoc);
+        //common style
+
+        //styleBorderLine.addRule(`outline`, `none`);
+        //styleBorderLine.addRule(`border-collapse`, `collapse`);
+        //styleBorderLine.addRule(`box-shadow`, `2px 0 0 0 #888, 0 2px 0 0 #888, 2px 2px 0 0 #888, 2px 0 0 0 #888 inset, 0 2px 0 0 #888 inset`);
+        
 
         let styleCenterText = newDoc.createStyle(`CenterText`);
         styleCenterText.addRule(`text-align`, `center`);
         styleCenterText.addRule(`vertical-align`, `middle`);
 
         //cdw
-        let cdw = new Div(`CardDetailWindow`)
-        style = newDoc.createStyle(cdw.ID);        
-        style.addRule(`width`, `300px`);
-        style.addRule(`height`, `900px`);
-        cdw.Styles.push(style);
-        cdw.Styles.push(styleFloat);
-        cdw.Styles.push(styleBorderLine);
-        cdw.Styles.push(styleCenterText);
-        newDoc.Elements.push(cdw);
+        let cdw = Riana.CreateDiv(newDoc, `CardDetailWindow`, 300, 900,
+            true, true, newDoc, styleCenterText);
 
-        let rw = new Div(`RightWindow`);
-        style = newDoc.createStyle(rw.ID);
-        style.addRule(`width`, `1000px`);
-        style.addRule(`height`, `900px`);
-        rw.Styles.push(style);
-        rw.Styles.push(styleFloat);
-        rw.Styles.push(styleBorderLine);        
-        newDoc.Elements.push(rw);
+        let rw = Riana.CreateDiv(newDoc, `RightWindow`, 1000, 900,
+            true, true, newDoc);
 
-        let uw = new Div(`UpWindow`);
-        style = newDoc.createStyle(uw.ID);
-        style.addRule(`width`, `1000px`);
-        style.addRule(`height`, `700px`);
-        uw.Styles.push(style);
-        uw.Styles.push(styleFloat);
-        uw.Styles.push(styleBorderLine);        
-        rw.Elements.push(uw);
+        let uw = Riana.CreateDiv(newDoc, `UpWindow`, 1000, 700,
+            true, true, rw);
 
-        let phw = new Div(`PlayerHandWindow`);
-        style = newDoc.createStyle(phw.ID);
-        style.addRule(`width`, `1000px`);
-        style.addRule(`height`, `200px`);
-        phw.Styles.push(style);
-        phw.Styles.push(styleFloat);
-        phw.Styles.push(styleBorderLine);
-        rw.Elements.push(phw);
+        let phw = Riana.CreateDiv(newDoc, `PlayerHandWindow`, 1000, 200,
+            true, true, rw);
+
+        let mw = Riana.CreateDiv(newDoc, `MainWindow`, 800, 700,
+            true, true, uw);
+
+        let pdw = Riana.CreateDiv(newDoc, `PlayerDetailWindow`, 198, 700,
+            true, true, uw);
+
+        let ea = Riana.CreateDiv(newDoc, `EnemyArea`, 800, 300,
+            true, false, mw);
+
+        let ead = Riana.CreateDiv(newDoc, `EnemyAreaDown`, 800, 200,
+            true, false, ea);
+
+        let eau = Riana.CreateDiv(newDoc, `EnemyAreaUp`, 800, 100,
+            true, false, ea);
+
+        let ecf = Riana.CreateDiv(newDoc, `EnemyCommonField`, 598, 200,
+            true, true, ead);
+
+        let eef = Riana.CreateDiv(newDoc, `EnemyEnhancementField`, 99, 200,
+            true, true, ead);
+
+        let edf = Riana.CreateDiv(newDoc, `EnemyDeckField`, 99, 200,
+            true, true, ead);
+
+        let edfd = Riana.CreateDiv(newDoc, `EnemyDeckFieldDeck`, 99, 100,
+            true, false, edf);
+
+        let edfdd = Riana.CreateDiv(newDoc, `EnemyDeckFieldDropDeck`, 99, 100,
+            true, false, edf);
+
+        let pua = Riana.CreateDiv(newDoc, `PublicArea`, 800, 100,
+            true, true, mw);
+
+        let pa = Riana.CreateDiv(newDoc, `PlayerArea`, 800, 300,
+            true, true, mw);
+
+        let pau = Riana.CreateDiv(newDoc, `PlayerAreaUp`, 800, 100,
+            true, false, pa);
+
+        let pad = Riana.CreateDiv(newDoc, `PlayerAreaDown`, 800, 200,
+            true, false, pa);
+
+        let pcf = Riana.CreateDiv(newDoc, `PlayerCommonField`, 598, 200,
+            true, true, pad);
+
+        let pef = Riana.CreateDiv(newDoc, `PlayerEnhancementField`, 99, 200,
+            true, true, pad);
+
+        let pdf = Riana.CreateDiv(newDoc, `PlayerDeckField`, 99, 200,
+            true, true, pad);
+
+        let pdfd = Riana.CreateDiv(newDoc, `PlayerDeckFieldDeck`, 99, 100,
+            true, false, pdf);
+
+        let pdfdd = Riana.CreateDiv(newDoc, `PlayerDeckFieldDropDeck`, 99, 100,
+            true, false, pdf);
 
         newDoc.printTo(IWDisplayInitializer.#doc, IWDisplayInitializer.DisplayWindow);
     }
