@@ -22,11 +22,15 @@ class IWDisplayInitializer {
 
         let newDoc = new Doc();
         let style = newDoc.createStyle(`Window`);
-        style.addRule(`width`, `1296px`);
-        style.addRule(`height`, `896px`);
+        style.addRule(`width`, `1300px`);
+        style.addRule(`height`, `900px`);
         style.addRule(`border-style`, `solid`);
         style.addRule(`border-width`, `2px`);
         style.addRule(`background-color`, `yellow`);
+        style.addRule(`text-align`, `left`);
+        style.addRule(`vertical-align`, `top`);
+        style.addRule(`border-spacing`, `0`);
+        //style.addRule(`box-sizing`, `border-box`);
 
         //common style
         let styleFloat = newDoc.createStyle(`Float`);
@@ -35,6 +39,8 @@ class IWDisplayInitializer {
         let styleBorderLine = newDoc.createStyle(`BorderLine`);
         styleBorderLine.addRule(`border-style`, `solid`);
         styleBorderLine.addRule(`border-width`, `1px`);
+        styleBorderLine.addRule(`border-spacing`, `0`);
+        styleBorderLine.addRule(`box-sizing`, `border-box`);
 
         let styleCenterText = newDoc.createStyle(`CenterText`);
         styleCenterText.addRule(`text-align`, `center`);
@@ -49,7 +55,34 @@ class IWDisplayInitializer {
         cdw.Styles.push(styleFloat);
         cdw.Styles.push(styleBorderLine);
         cdw.Styles.push(styleCenterText);
-        newDoc.Content = cdw;        
+        newDoc.Elements.push(cdw);
+
+        let rw = new Div(`RightWindow`);
+        style = newDoc.createStyle(rw.ID);
+        style.addRule(`width`, `1000px`);
+        style.addRule(`height`, `900px`);
+        rw.Styles.push(style);
+        rw.Styles.push(styleFloat);
+        rw.Styles.push(styleBorderLine);        
+        newDoc.Elements.push(rw);
+
+        let uw = new Div(`UpWindow`);
+        style = newDoc.createStyle(uw.ID);
+        style.addRule(`width`, `1000px`);
+        style.addRule(`height`, `700px`);
+        uw.Styles.push(style);
+        uw.Styles.push(styleFloat);
+        uw.Styles.push(styleBorderLine);        
+        rw.Elements.push(uw);
+
+        let phw = new Div(`PlayerHandWindow`);
+        style = newDoc.createStyle(phw.ID);
+        style.addRule(`width`, `1000px`);
+        style.addRule(`height`, `200px`);
+        phw.Styles.push(style);
+        phw.Styles.push(styleFloat);
+        phw.Styles.push(styleBorderLine);
+        rw.Elements.push(phw);
 
         newDoc.printTo(IWDisplayInitializer.#doc, IWDisplayInitializer.DisplayWindow);
     }
