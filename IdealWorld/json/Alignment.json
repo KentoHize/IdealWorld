@@ -1,5 +1,11 @@
 [
   {
+    "ID": 0,
+    "Name": "None",
+    "CName": "無陣營",
+    "Description": ""
+  },
+  {
     "ID": 1,
     "Name": "Gangs",
     "CName": "幫派",

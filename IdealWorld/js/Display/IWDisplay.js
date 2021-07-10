@@ -15,9 +15,9 @@ class IWDisplay {
     constructor(iwSystem, document, displayWindow) {
         IWDisplayInitializer.initialize(iwSystem, document, displayWindow);
         
-        let cards = [{ name:`card1`, ap:3, dp:3, mdp:3, description:`this is a card.`}];
+        //let cards = [{ name:`card1`, ap:3, dp:3, mdp:3, description:`this is a card.`}];
         this.#doc = document;
-        this.showCardDetail(cards[0]);
+        //this.showCardDetail(cards[0]);
     }
 
     
