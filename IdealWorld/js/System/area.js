@@ -1,5 +1,5 @@
-﻿class Area {    
-    
+﻿class Area {
+    MissionDecks;
     MissionCards;
     Deck;
     Stage;
