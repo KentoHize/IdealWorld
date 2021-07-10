@@ -22,5 +22,17 @@
     "Name": "Mobile Phone Repair",
     "CName": "手機維修",
     "KeyAttribute": "Experience"
+  },
+  {
+    "ID": 5,
+    "Name": "Pickpocket",
+    "CName": "盜竊",
+    "KeyAttribute": "Dexterity"
+  },
+  {
+    "ID": 6,
+    "Name": "Open Lock",
+    "CName": "開鎖",
+    "KeyAttribute": "Dexterity"
   }
 ]

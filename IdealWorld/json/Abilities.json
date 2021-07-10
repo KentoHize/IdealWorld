@@ -33,5 +33,19 @@
     "CName": "刺傷 X",
     "ShorForm": "",
     "Description": "刺傷 - X"
+  },
+  {
+    "ID": 6,
+    "Name": "Parry - Range",
+    "CName": "格檔 遠距中型 X",
+    "ShorForm": "",
+    "Description": "格檔 遠距 - X"
+  },
+  {
+    "ID": 7,
+    "Name": "Parry - Range",
+    "CName": "格檔 遠距重型 X",
+    "ShorForm": "",
+    "Description": "格檔 遠距重型 - X"
   }
 ]
