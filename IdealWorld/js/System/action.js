@@ -24,3 +24,7 @@ export { Action };
 //任務攻擊宣言 - Attack Mission Character(Card[])
 //防禦宣言 - Defense(Card[][])
 //技能啟動宣言 - Active Skill
+//裝備移動 - Move Equipment
+//角色移動 - Move Character
+//回合結束 - Turn End
+//不回應宣言 - No Response 
